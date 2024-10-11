@@ -1,30 +1,35 @@
+import java.time.LocalDate;
+
 public class App {
     public static void main(String[] args) throws Exception {
+       Curso curso = new Curso("Full Stack", 1000,350.0);
+       Professor professor = new Professor();
+       professor.setNome("Alexandre");
+       professor.setTemMestrado(true);
+
+       Aluno aluno1 = new Aluno("Jeferson");
+       Aluno aluno2 = new Aluno("Leidiane");
+       Aluno aluno3 = new Aluno("Osmaildo");
+       Aluno aluno4 = new Aluno("Mário");
+       Aluno aluno5 = new Aluno("Emerson");
+
+       List<Aluno> aluno = new ArrayList<>();
+       alunos.add(aluno1);
+       alunos.add(aluno2);
+       alunos.add(aluno3);
+       alunos.add(aluno4);
+       alunos.add(aluno5);
        
-        Aluno aluno1 = new Aluno();
+       Turma turmaTercQui = new Turma();
 
-        aluno1.nome = "jefferson";
-        aluno1.cpf = "123456-12";
-        aluno1.email = "jeff@gmail.com";
-        aluno1.senha = "abc123";
-        
-        
-        aluno1.exibirDetalhes();
+       turmaTercQui.setNome("Terças e Quintas");
+       turmaTercQui.setDataInicio(LocalDate.now());
+       turmaTercQui.setDataTermino(java.time.LocalDate.of(2025,3,30));
+       turmaTercQui.setTurno("Noite");
+       turmaTercQui.setCurso(curso);
+       turmaTercQui.setProfessor(professor);
 
-        //aluno1.fazerLogin("jeff@gmail.com", "abc123");
-        aluno1.setFiliacao("Maria");
-        aluno1.setNome("Maria");
-        aluno1.setCpf("Maria");
-        aluno1.setGenero('m');
-        
-        
-        String filiacao = aluno1.getFiliacao();
-        String nome = aluno1.getNome();
-        String filiacao = aluno1.getFiliacao();
-           
-        System.out.println("Filiação: " + filiacao);
-
-        
-
+       turmaTercQui.exibirDetalhes();
+       
     }
 }
